@@ -1,0 +1,239 @@
+{
+  "type": "contacts",
+  "recordPath": "contacts/",
+  "schema": {
+    "fields": [
+      {
+        "name": "first_name",
+        "type": "text",
+        "required": true
+      },
+      {
+        "name": "surname",
+        "type": "text"
+      },
+      {
+        "name": "emails",
+        "type": "array",
+        "itemType": "group",
+        "fields": [
+          {
+            "name": "value",
+            "type": "text"
+          },
+          {
+            "name": "kind",
+            "type": "select",
+            "options": [
+              "private",
+              "work",
+              "other"
+            ]
+          }
+        ]
+      },
+      {
+        "name": "phones",
+        "type": "array",
+        "itemType": "group",
+        "fields": [
+          {
+            "name": "value",
+            "type": "text"
+          },
+          {
+            "name": "kind",
+            "type": "select",
+            "options": [
+              "private",
+              "mobile",
+              "work",
+              "other"
+            ]
+          }
+        ]
+      },
+      {
+        "name": "accounts",
+        "type": "array",
+        "itemType": "group",
+        "fields": [
+          {
+            "name": "handle",
+            "type": "text"
+          },
+          {
+            "name": "platform",
+            "type": "select",
+            "options": [
+              "whatsapp",
+              "instagram",
+              "facebook",
+              "tiktok",
+              "youtube",
+              "telegram",
+              "x",
+              "linkedin",
+              "reddit",
+              "snapchat",
+              "pinterest",
+              "discord",
+              "threads",
+              "spotify",
+              "twitch",
+              "github",
+              "mastodon",
+              "bluesky",
+              "signal",
+              "wechat",
+              "weibo",
+              "line",
+              "kakaotalk",
+              "viber",
+              "skype",
+              "slack",
+              "matrix",
+              "gitlab",
+              "codeberg",
+              "stackoverflow",
+              "medium",
+              "substack",
+              "behance",
+              "dribbble",
+              "figma",
+              "soundcloud",
+              "bandcamp",
+              "vimeo",
+              "tumblr",
+              "flickr",
+              "strava",
+              "goodreads",
+              "letterboxd",
+              "xing",
+              "website",
+              "other"
+            ]
+          }
+        ]
+      },
+      {
+        "name": "contact_type",
+        "type": "multiselect",
+        "options": [
+          "family",
+          "work",
+          "network",
+          "friends",
+          "health",
+          "customer"
+        ]
+      },
+      {
+        "name": "contact_tags",
+        "type": "multiselect"
+      },
+      {
+        "name": "birthday",
+        "type": "text",
+        "format": "month-day"
+      },
+      {
+        "name": "birth_year",
+        "type": "number"
+      },
+      {
+        "name": "birthday_reminder_lead",
+        "type": "text",
+        "format": "duration-iso8601"
+      },
+      {
+        "name": "relationships",
+        "type": "array",
+        "itemType": "group",
+        "fields": [
+          {
+            "name": "type",
+            "type": "text"
+          },
+          {
+            "name": "to",
+            "type": "text"
+          }
+        ]
+      },
+      {
+        "name": "how_met",
+        "type": "text"
+      },
+      {
+        "name": "address",
+        "type": "group",
+        "fields": [
+          {
+            "name": "street",
+            "type": "text"
+          },
+          {
+            "name": "postcode",
+            "type": "text"
+          },
+          {
+            "name": "city",
+            "type": "text"
+          },
+          {
+            "name": "region",
+            "type": "text"
+          },
+          {
+            "name": "country",
+            "type": "text"
+          }
+        ]
+      },
+      {
+        "name": "company",
+        "type": "text"
+      },
+      {
+        "name": "role",
+        "type": "text"
+      },
+      {
+        "name": "gift_ideas",
+        "type": "array",
+        "itemType": "text"
+      },
+      {
+        "name": "important_dates",
+        "type": "array",
+        "itemType": "group",
+        "fields": [
+          {
+            "name": "label",
+            "type": "text"
+          },
+          {
+            "name": "date",
+            "type": "date"
+          }
+        ]
+      },
+      {
+        "name": "avatar",
+        "type": "url",
+        "format": "image"
+      },
+      {
+        "name": "reminder_cadence",
+        "type": "text",
+        "format": "duration-iso8601"
+      }
+    ]
+  },
+  "views": [
+    "list",
+    "timeline",
+    "birthdays"
+  ]
+}
